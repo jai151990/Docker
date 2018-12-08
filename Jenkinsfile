@@ -18,4 +18,5 @@ pipeline {
     stage ('docker container'){
         sh 'docker run -d --name dep jaisriram111/shankar-img /bin/bash'
     }
+ }
 }
