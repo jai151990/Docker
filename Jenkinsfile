@@ -9,11 +9,11 @@ node {
     stage ('build image') {
         app = docker.build("jaisriram111/shankar-img")
     }
-    stage ('test image')
+    stage ('test image') {
         app.inside {
-            sh 'echo "test passed"'
-        }
+            sh 'echo "test passed"' }
+    }
     stage ('docker container'){
         sh 'cretae-env.sh'
-        }
+    }
 }
