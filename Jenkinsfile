@@ -2,15 +2,16 @@ pipeline {
   agent any
    stages {
      stage ('checkout'){
-        steps {
+        step {
             checkout scm }
      }
      stage ('build'){
-        steps {
+        step {
             sh 'mvn install'}
     }
     stage ('build image') {
-        sh 'docker build -t="jaisriram111/shankar-img" .'
+        step {
+            sh 'docker build -t="jaisriram111/shankar-img" .' }
     }
     stage ('test image') {
         sh 'echo "test passed"' 
