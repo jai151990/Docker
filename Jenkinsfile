@@ -14,6 +14,6 @@ node {
             sh 'echo "test passed"' }
     }
     stage ('docker container'){
-        sh 'cretae-env.sh'
+        sh 'docker run -d --name dep jaisriram111/shankar-img /bin/bash'
     }
 }
